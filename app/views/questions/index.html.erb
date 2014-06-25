@@ -1,0 +1,8 @@
+<% @questions.each do |question| %>
+
+  <%= link_to question.q, edit_question_path(question.id) %>
+
+<% end %>
+
+
+<%= link_to 'Create New Question', new_question_path %>

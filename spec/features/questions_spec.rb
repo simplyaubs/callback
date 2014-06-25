@@ -7,10 +7,25 @@ feature 'interview questions CRUD' do
 
   scenario 'user can edit questions they created' do
     create_question
-    click_on 'Edit'
+
+    click_on 'If you were an animal, which would you be?'
     fill_in 'question[q]', with: 'What is your favorite type of ice cream?'
     click_on 'Submit Changes'
     expect(page).to have_content 'What is your favorite type of ice cream?'
     expect(page).to_not have_content 'If you were an animal, which would you be?'
+  end
+
+  scenario 'user can delete questions they created' do
+    visit '/'
+    click_on 'Create New Question'
+    fill_in 'question[q]', with: 'Tell me about yourself'
+    click_on 'Submit'
+    expect(page).to have_content 'Tell me about yourself'
+
+    create_question
+    click_on 'Tell me about yourself'
+    click_on 'Delete'
+    expect(page).to have_content 'If you were an animal, which would you be?'
+    expect(page).to_not have_content 'Tell me about yourself'
   end
 end
