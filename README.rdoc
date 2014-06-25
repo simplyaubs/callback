@@ -1,5 +1,8 @@
 == README
 
+{<img src="https://codeclimate.com/github/simplyaubs/callback.png" />}[https://codeclimate.com/github/simplyaubs/callback]
+{<img src="https://travis-ci.org/simplyaubs/callback.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/simplyaubs/callback]
+
 This is an app to help you sharpen your phone interview skills.
 
 Pivotal tracker: https://www.pivotaltracker.com/n/projects/1110426
