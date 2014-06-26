@@ -1,0 +1,21 @@
+<h3>Please sign in!</h3>
+
+<%= form_tag(sessions_path, method: :post) do %>
+
+  <%= label_tag :email %>
+  <%= email_field_tag :email %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+
+  <%= submit_tag "Sign in" %>
+
+<% end %>
+
+<%= flash[:notice] %>
+
+<% @user.errors.full_messages.each do |error| %>
+  <%= error %>
+<% end %>
+
+

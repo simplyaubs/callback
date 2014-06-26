@@ -14,4 +14,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'capybara', '~> 2.2.1'
   gem 'launchy', '~> 2.4.2'
+  gem 'pry', '~> 0.9.12.6'
 end
+
+gem 'bcrypt', '~> 3.1.7'
