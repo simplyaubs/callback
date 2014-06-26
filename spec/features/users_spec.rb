@@ -41,4 +41,13 @@ feature 'User' do
     expect(page).to have_content 'Email has already been taken'
   end
 
+  scenario 'sign in and register options not visible when user is signed in' do
+    create_user
+    visit root_path
+    expect(page).to_not have_content 'Sign out'
+    sign_in_user
+    expect(page).to_not have_content 'Sign in'
+    expect(page).to_not have_content 'Register'
+  end
+
 end

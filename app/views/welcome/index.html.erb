@@ -2,19 +2,12 @@
 
 <%= link_to 'Create New Question', new_question_path %>
 
-<h3><%= link_to 'Register', new_user_path(@user) %></h3>
-<h3><%= link_to 'Sign in', new_session_path(@user) %></h3>
-
-<% if @user %>
-  <h3>Welcome <%= @user.email %>!</h3>
-<% end %>
-
-<% if @user %>
-  <h3><%= link_to 'Sign out', session_path(@user), method: :delete %></h3>
-<% end %>
-
-<% if @user %>
+<% if current_user %>
   <h3>Hello <%= @user.email %>!</h3>
+  <h3><%= link_to 'Sign out', session_path(@user), method: :delete %></h3>
+<% else %>
+  <h3><%= link_to 'Register', new_user_path(@user) %></h3>
+  <h3><%= link_to 'Sign in', new_session_path(@user) %></h3>
 <% end %>
 
 <%= flash[:notice] %>
