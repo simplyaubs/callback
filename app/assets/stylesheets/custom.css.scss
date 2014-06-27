@@ -1,1 +1,20 @@
 @import "bootstrap";
+
+.error {
+  color: red;
+}
+
+.main-blurb {
+  color: white;
+  margin-top: 20%;
+}
+
+.main-image {
+  height: 800px;
+  background: url(madmen.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+

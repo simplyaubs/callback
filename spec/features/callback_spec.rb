@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature 'Callback' do
-  scenario 'User can see Welcome on homepage' do
+  scenario 'User can see app name on homepage' do
     visit '/'
-    expect(page).to have_content 'Welcome'
+    expect(page).to have_content 'callback'
   end
 end
