@@ -8,6 +8,16 @@
 </head>
 <body>
 <div class="container-fluid">
+  <nav class="row col-sm-12">
+      <% if current_user %>
+      <div class="pull-right">
+        <p><%= current_user.email %>!</p>
+      </div>
+      <div class="pull-right">
+        <p><%= link_to 'Sign out', session_path(current_user), method: :delete %></p>
+      </div>
+      <% end %>
+  </nav>
   <%= yield %>
 </div>
 </body>

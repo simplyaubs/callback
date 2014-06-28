@@ -10,13 +10,8 @@
       </div>
     </div>
 
-
     <div class="row">
-      <% if current_user %>
-        <h3>Hello <%= @user.email %>!</h3>
-
-        <h3><%= link_to 'Sign out', session_path(@user), method: :delete %></h3>
-      <% else %>
+      <% unless current_user %>
         <div class="col-sm-offset-1">
           <div class="col-sm-2">
             <h3><%= link_to 'Register', new_user_path(@user), html_options = {class: "btn btn-primary btn-lg"} %></h3>
@@ -29,9 +24,6 @@
     </div>
 
     <%= flash[:notice] %>
-
-
-    <%= link_to 'Create New Question', new_question_path %>
 
   </div>
 </div>

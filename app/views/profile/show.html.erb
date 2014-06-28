@@ -1,0 +1,10 @@
+<h1>My Profile</h1>
+<h2>Profile for <%= current_user.email %></h2>
+
+<h3>Call us at: 867-5309 </h3>
+
+<h3>Eventually, 'my recordings' section will go here</h3>
+
+<p><%= link_to 'Create New Question', new_question_path %></p>
+
+<%= flash[:notice] %>

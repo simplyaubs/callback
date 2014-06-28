@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :questions
   resources :users
   resources :sessions
+  get '/profile', to: 'profile#show'
 
 end

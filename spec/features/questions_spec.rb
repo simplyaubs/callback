@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 feature 'interview questions CRUD' do
+
+  before do
+    create_user
+    sign_in_user
+  end
+
   scenario 'user can create an interview question' do
     create_question
   end
@@ -16,7 +22,6 @@ feature 'interview questions CRUD' do
   end
 
   scenario 'user can delete questions they created' do
-    visit '/'
     click_on 'Create New Question'
     fill_in 'question[q]', with: 'Tell me about yourself'
     click_on 'Submit'
