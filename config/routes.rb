@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   get '/profile', to: 'profile#show'
+  post 'twilio/voice' => 'twilio#voice'
 
 end

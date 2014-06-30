@@ -8,8 +8,14 @@ class TwilioController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def voice
+    questions = ['Why do you want to work at this company?', 'What is your biggest weakness?']
     response = Twilio::TwiML::Response.new do |r|
-      r.Say 'Hey there. Congrats on integrating Twilio into your Rails 4 app.', :voice => 'alice'
+      r.Say 'Welcome to Callback!', voice: 'alice'
+      questions.each do |question|
+        r.Say question, voice: 'alice'
+        r.Pause length="2"
+      end
+
       r.Play 'http://linode.rabasa.com/cantina.mp3'
     end
 
