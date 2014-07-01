@@ -12,7 +12,7 @@ class TwilioController < ApplicationController
     response = Twilio::TwiML::Response.new do |r|
       r.Say 'Welcome to Callback! A service to help you with phone interviews.', voice: 'alice'
       questions.each do |question|
-        r.Say question, voice: 'alice'
+        r.Say question[:q], voice: 'alice'
         r.Pause length="2"
       end
 
