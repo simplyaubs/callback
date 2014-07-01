@@ -1,11 +1,15 @@
 language: ruby
 rvm:
-  - "2.1.1"
+- 2.1.1
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:create db:migrate
+- RAILS_ENV=test bundle exec rake --trace db:create db:migrate
 branches:
   only:
-    - master
+  - master
 deploy:
   provider: heroku
-  api_key: ENV['HEROKU_API_KEY']
+  api_key:
+    secure: BRg0tPlcW6xeVhpdS+OV+0U3feuIEC6MSoDJLgVwgUdw3CjANiTpF6GsH3MDRyV4xIRKJw8hzqc5N7yO2/XzfhIoWEmuUbSbY6x9J4tS0zOOYn09dyCY8j0r90cHl1B/xDLsb2mm0/5AZZs9xxz807KbuBvYHO0zuQMVdYhYVvA=
+  app: callback-staging
+  on:
+    repo: simplyaubs/callback
