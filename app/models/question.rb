@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
 
-  validates :q, uniqueness: true
+  validates :q, presence: true, uniqueness: true
 
 end
