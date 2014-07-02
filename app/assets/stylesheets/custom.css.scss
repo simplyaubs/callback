@@ -10,7 +10,7 @@
 }
 
 .main-image {
-  height: 800px;
+  height: 100%;
   background: image-url("madmen.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -72,7 +72,7 @@ div.form-group {
   padding-bottom: 1%;
   opacity: .8;
   margin-top: 20%;
-  margin-bottom: 25%;
+  margin-bottom: 30%;
 }
 
 .text-center {
@@ -85,7 +85,7 @@ div.form-group {
 }
 
 .list-group-item:last-child {
-  margin-bottom: 130%;
+  margin-bottom: 160%;
 }
 
 .questions-index {
@@ -102,4 +102,25 @@ div.text-right.new-button {
 .col-sm-offset-5.col-sm-10 {
   margin-left: 2%;
   width: 100%;
+}
+
+.col-sm-6.main-blurb {
+  background-color: #695949;
+  margin-top: 35%;
+  border-radius: 10px;
+}
+
+.btn.btn-primary.btn-lg {
+  background-color: #428bca;
+  color: white;
+}
+
+div.col-sm-2 {
+  margin-bottom: 50%;
+}
+
+.alert-success {
+  background-color: #B0D2CD;
+  color: #428bca;
+  height: 3%;
 }

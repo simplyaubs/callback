@@ -1,10 +1,11 @@
+<div class="alert-success"><%= flash[:notice] %></div>
 <div class="text-right new-button">
   <%= link_to 'Create New Question', new_question_path, class: 'btn btn-lg btn-primary' %>
 </div>
 <div class="questions-index">
 
-  <div class="alert-success"><%= flash[:notice] %></div>
 
   <div class="list-group-item">Call us at: (303) 974-4454</div>
-  <div class="list-group-item">My Recordings</div>
+  <div class="list-group-item">Listen to My Recordings</div>
+  <div class="list-group-item"><%= link_to 'View List of Commonly Asked Questions', questions_path %></div>
 </div>

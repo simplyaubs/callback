@@ -1,10 +1,10 @@
 <%= form_tag(sessions_path, method: :post, class: "form-horizontal") do %>
   <div class="form-group">
-    <p class="alert-error"><%= flash[:notice] %></p>
-
     <h1 class="text-center">Sign in</h1>
 
-    <div class="col-sm-offset-5 col-sm-10">
+    <p class="alert-error"><%= flash[:notice] %></p>
+
+    <div class="col-sm-offset-5 col-sm-10" style="padding-top: 1%;">
       <%= label_tag :email, nil, class: "col-sm-5 control-label" %>
       <%= email_field_tag :email, '', autofocus: true %>
     </div>
