@@ -1,8 +1,14 @@
-<%= form_for @question do |f| %>
+<%= form_for @question, class: "form-horizontal" do |f| %>
+  <div class="form-group">
+    <h1 class="text-center">Create A New Question</h1>
 
-  <%= f.label :q, "Question" %>
-  <%= f.text_field :q %>
+    <div class="text-center">
+      <%= f.label :q, "Question", class: "control-label" %>
+      <%= f.text_field :q, autofocus: true %>
+    </div>
 
-  <%= f.submit 'Submit', class: "btn-primary" %>
-
+    <div class="text-center">
+      <%= f.submit 'Submit', class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
 <% end %>

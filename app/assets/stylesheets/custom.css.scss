@@ -18,3 +18,88 @@
   background-size: cover;
 }
 
+.container-fluid {
+  padding: 0;
+  background: image-url("madmenfinale-blogSpan.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+h3 {
+  padding-bottom: 1%;
+}
+
+nav {
+  background-color: #D6D1B8;
+  padding: 0;
+  margin: 0;
+}
+
+.pull-right {
+  display: block;
+  padding: 1%;
+}
+
+.alert-success {
+  text-align: center;
+}
+
+.col-sm-12 {
+  margin: 2% auto;
+  text-align: center;
+}
+
+.alert-error {
+  text-align: center;
+  background-color: #FFBDB4;
+  margin: 0;
+}
+
+.control-label {
+  font-size: 1.25em;
+  padding: 1%;
+}
+
+nav.row.col-sm-12 {
+  margin-top: 0;
+}
+
+div.form-group {
+  background-color: lightgrey;
+  padding-bottom: 1%;
+  opacity: .8;
+  margin-top: 20%;
+  margin-bottom: 25%;
+}
+
+.text-center {
+  position: relative;
+}
+
+.list-group-item {
+  width: 300px;
+  opacity: .8;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 130%;
+}
+
+.questions-index {
+  width: 300px;
+  float: right;
+  margin-right: 1%;
+}
+
+div.text-right.new-button {
+  margin-right: 4%;
+  margin-bottom: 2%;
+}
+
+.col-sm-offset-5.col-sm-10 {
+  margin-left: 2%;
+  width: 100%;
+}

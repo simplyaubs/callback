@@ -1,8 +1,11 @@
-<% @questions.each do |question| %>
+<div class="text-right new-button">
+  <%= link_to 'Create New Question', new_question_path, class: 'btn btn-lg btn-primary' %>
+</div>
 
-  <%= link_to question.q, edit_question_path(question.id) %>
-
-<% end %>
-
-
-<%= link_to 'Create New Question', new_question_path %>
+<div class="questions-index">
+  <% @questions.each do |question| %>
+    <div class="list-group-item">
+      <%= link_to question.q, edit_question_path(question.id), class: 'edit-link' %>
+    </div>
+  <% end %>
+</div>

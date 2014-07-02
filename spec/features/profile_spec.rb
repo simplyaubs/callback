@@ -6,7 +6,7 @@ feature 'user profile page' do
     create_user
     sign_in_user
     expect(page).to have_content 'My Profile'
-    expect(page).to have_content 'Profile for keri@example.com'
+    expect(page).to have_content 'keri@example.com'
     expect(page).to have_content 'Call us at:'
   end
 end
